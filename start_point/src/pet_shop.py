@@ -15,6 +15,10 @@ def get_pets_sold(shop):
 def increase_pets_sold(shop, number_of_pets):
     shop["admin"]["pets_sold"] += number_of_pets
 
+def get_stock_count(shop):
+    stock = len(shop["pets"]) 
+    return stock 
+
 
 
 
