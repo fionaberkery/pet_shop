@@ -8,6 +8,7 @@ def get_total_cash(shop):
 
 def add_or_remove_cash(shop, amount):
     shop["admin"]["total_cash"] += amount
+    
 
 
 
