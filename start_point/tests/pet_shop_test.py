@@ -161,7 +161,6 @@ class TestPetShop(unittest.TestCase):
         self.assertEqual(1000, cash)
 
     #15
-    @unittest.skip("delete this line to run the test")
     def test_remove_customer_cash(self):
         customer = self.customers[0]
         remove_customer_cash(customer, 100)
