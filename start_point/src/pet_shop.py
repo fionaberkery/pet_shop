@@ -50,7 +50,11 @@ def find_pet_by_name(shop, pets_name):
 # 13
 def add_pet_to_stock(shop, new_pet):
     shop["pets"].append(new_pet)
-    
+
+#14
+def get_customer_cash(customer):
+    return customer["cash"]
+
 
 
 
