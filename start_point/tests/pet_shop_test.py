@@ -142,7 +142,7 @@ class TestPetShop(unittest.TestCase):
         self.assertIsNone(pet)
 
     #12
-    @unittest.skip("delete this line to run the test")
+    
     def test_remove_pet_by_name(self):
         remove_pet_by_name(self.cc_pet_shop, "Arthur")
         pet = find_pet_by_name(self.cc_pet_shop,"Arthur")
@@ -200,7 +200,7 @@ class TestPetShop(unittest.TestCase):
     # These are 'integration' tests so we want multiple asserts.
     # If one fails the entire test should fail
     #
-    @unittest.skip("delete this line to run the test")
+    
     def test_sell_pet_to_customer__pet_found(self):
         customer = self.customers[0]
         pet = find_pet_by_name(self.cc_pet_shop,"Arthur")

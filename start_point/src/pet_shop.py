@@ -41,13 +41,10 @@ def find_pet_by_name(shop, pets_name):
             return pet 
 
 #12
-# def remove_pet_by_name(shop, pets_name):
-#     for pet in shop["pets"]:
-#         if shop["pets"]["name"]  == pets_name:
-#             del pet 
-
-
-            
+def remove_pet_by_name(shop, pets_name):
+    pet_to_delete = find_pet_by_name(shop, pets_name)
+    shop["pets"].remove(pet_to_delete)
+        
 # 13
 def add_pet_to_stock(shop, new_pet):
     shop["pets"].append(new_pet)
@@ -76,12 +73,17 @@ def customer_can_afford_pet(customer_name, pet_to_buy):
         return False 
 
 # intergration 1
-def sell_pet_to_customer(pet_shop, pet_to_sell, customer_to_sell_to):
-    get_customer_pet_count(customer_to_sell_to)
-    get_pets_sold(pet_shop)
-    get_customer_cash(customer_to_sell_to)
-    get_total_cash(pet_shop)
+def sell_pet_to_customer(pet_shop, pet, customer):
+    if pet != None and customer_can_afford_pet(customer, pet):
+        remove_pet_by_name(pet_shop, pet["name"])
+        add_pet_to_customer(customer, pet)
+        remove_customer_cash(customer, pet["price"])
+        add_or_remove_cash(pet_shop, pet["price"])
+        increase_pets_sold(pet_shop, 1)
 
+
+
+   
 
 
 
