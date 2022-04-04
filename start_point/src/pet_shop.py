@@ -64,12 +64,14 @@ def get_customer_pet_count(customer):
 def add_pet_to_customer(customer_name, new_pet):
    customer_name["pets"].append(new_pet) 
 
-# optional 1 and 2
-def customer_can_afford_pet(customer_name, pet_to_buy):
-    if customer_name["cash"] >= 100:
-        return True 
-    else:
-        return False 
+# optional 1 and 2 - (I did the first one, either work)
+# def customer_can_afford_pet(customer_name, pet_to_buy):
+#     if customer_name["cash"] >= 100:
+#         return True 
+#     else:
+#         return False 
+def customer_can_afford_pet(customer, pet):
+    return customer["cash"] >= pet["price"]
 
 # intergration 1
 def sell_pet_to_customer(pet_shop, pet, customer):
