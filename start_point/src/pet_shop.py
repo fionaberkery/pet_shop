@@ -33,7 +33,6 @@ def get_pets_by_breed(pet_shop, breed):
             pets.append(pets)
     return pets 
 
-
 #10 and 11
 def find_pet_by_name(shop, pets_name):
     for pet in shop["pets"]:
